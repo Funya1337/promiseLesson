@@ -3,7 +3,7 @@ let promise1 = fetch('https://nodejs.org/api/console.json')
     .then(res => res.json());
 let promise2 = fetch('https://raw.githubusercontent.com/klishevich/codingbootcamp/master/package.json')
     .then(res => res.json())
-let promise3 = fetch('http://nodejs.org/dist/index.json1')
+let promise3 = fetch('http://nodejs.org/dist/index.json')
     .then(res => res.json())
     let obj = {};
 

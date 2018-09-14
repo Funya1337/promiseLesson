@@ -1,20 +1,20 @@
 const fs = require('fs');
 
-// function AsyncRead(first, second, third) {
-//     console.time('AsyncTime');
-//     fs.readFile(first, 'utf8', (err, data) => {
-//         // console.log(data);
-//     })
-//     fs.readFile(second, 'utf8', (err, data) => {
-//         // console.log(data);
-//     })
-//     fs.readFile(third, 'utf8', (err, data) => {
-//         // console.log(data);
-//         console.timeEnd('AsyncTime');
-//     })
-// }
+function AsyncRead(first, second, third) {
+    console.time('AsyncTime');
+    fs.readFile(first, 'utf8', (err, data) => {
+        // console.log(data);
+    })
+    fs.readFile(second, 'utf8', (err, data) => {
+        // console.log(data);
+    })
+    fs.readFile(third, 'utf8', (err, data) => {
+        // console.log(data);
+        console.timeEnd('AsyncTime');
+    })
+}
 
-// AsyncRead('test.txt', 'test1.txt', 'test2.txt');
+AsyncRead('test.txt', 'test1.txt', 'test2.txt');
 
 function SyncRead1(first, second, third) {
     console.time('SyncTime');
