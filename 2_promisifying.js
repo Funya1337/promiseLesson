@@ -1,5 +1,6 @@
 const http = require('http');
-function httpRequest(url) {
+
+const httpRequest = function (url) {
     return new Promise(
         (resolve, reject) => {
             http.get(url, (res) => {
@@ -20,10 +21,13 @@ function httpRequest(url) {
         }
     )
 }
-httpRequest('http://nodejs1.org/dist/index.json')
-.then((result) => {
-    console.log(result);
-})
-.catch((reason) => {
-    console.error('Server is not working', reason);
-})
+
+// httpRequest('http://nodejs.org/dist/index.json')
+// .then((result) => {
+//     console.log(result);
+// })
+// .catch((reason) => {
+//     console.error('Server is not working', reason);
+// })
+
+module.exports = httpRequest
